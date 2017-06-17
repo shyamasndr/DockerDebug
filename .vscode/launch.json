@@ -24,7 +24,7 @@
             "request": "attach",
             "processId": "${command:pickRemoteProcess}",
             "pipeTransport": {
-                "pipeProgram": "bash",
+                "pipeProgram": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
                 "pipeArgs": [
                     "-c",
                     "docker exec -i json ${debuggerCommand}"

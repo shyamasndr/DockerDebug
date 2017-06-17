@@ -10,12 +10,14 @@ namespace jsonfile
         static void Main(string[] args)
         {
             //Give yourself 30secs to launch the container and add a breakpoint
-            Thread.Sleep(30000);
+            while (true)
+            {
+                Thread.Sleep(3000);
 
-            var person = JsonConvert.DeserializeObject<Person>(File.ReadAllText("myfile.json"));
-            Console.WriteLine(person.Name + person.Age);
+                var person = JsonConvert.DeserializeObject<Person>(File.ReadAllText("myfile.json"));
+                Console.WriteLine(person.Name + person.Age);
 
-            Thread.Sleep(Timeout.Infinite);
+            }
         }
     }
 
